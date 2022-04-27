@@ -1,4 +1,3 @@
-{
   spring:
    jpa:
      hibernate:
@@ -11,7 +10,6 @@
        matching-strategy: ant_path_matcher
    datasource:
      driver-class-name: com.mysql.cj.jdbc.Driver
-     url: jdbc:mysql://localhost:3306/NOMBREDEBBDD?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+     url: jdbc:mysql://localhost:3306/demodb?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
      username: root
-     password: 1234567890
-    }
+     password: Agmiox2022!
