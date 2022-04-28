@@ -3,7 +3,7 @@ package com.oesia.apertura.demo.estadoproyecto.service.implementacion;
 import com.oesia.apertura.demo.estadoproyecto.entities.EstadoProyectoEntity;
 import com.oesia.apertura.demo.estadoproyecto.mapper.EstadoProyectoMapper;
 import com.oesia.apertura.demo.estadoproyecto.model.EstadoProyectoDTO;
-import com.oesia.apertura.demo.estadoproyecto.repository.EstadoProyectoRepositorio;
+import com.oesia.apertura.demo.estadoproyecto.repository.EstadoProyectoRepository;
 import com.oesia.apertura.demo.estadoproyecto.service.interfaz.ListEstadoProyectoInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import java.util.List;
 public class ListEstadoProyectoImpl implements ListEstadoProyectoInterface {
 
     @Autowired
-    private EstadoProyectoRepositorio estadoProyectoRepositorio;
+    private EstadoProyectoRepository estadoProyectoRepository;
 
     @Autowired
     private EstadoProyectoMapper estadoProyectoMapper;
@@ -23,7 +23,7 @@ public class ListEstadoProyectoImpl implements ListEstadoProyectoInterface {
     @Override
     public List<EstadoProyectoDTO> list() {
 
-        List<EstadoProyectoEntity> estadoProyectoEntities = estadoProyectoRepositorio.findAll();
+        List<EstadoProyectoEntity> estadoProyectoEntities = estadoProyectoRepository.findAll();
 
         List<EstadoProyectoDTO> estadoProyectoDTOS = new ArrayList<>();
 
