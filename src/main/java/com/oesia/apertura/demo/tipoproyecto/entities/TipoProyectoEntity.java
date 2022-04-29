@@ -12,7 +12,7 @@ public class TipoProyectoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "TipoProyectoId", unique = true, nullable = false)
-    private Long tipoProyectolId;
+    private Long tipoProyectoId;
 
     @Column(name = "Nombre", nullable = false)
     private String nombre;
