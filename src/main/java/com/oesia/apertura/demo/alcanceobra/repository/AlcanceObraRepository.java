@@ -1,4 +1,7 @@
 package com.oesia.apertura.demo.alcanceobra.repository;
 
-public interface AlcanceObraRepository {
+import com.oesia.apertura.demo.alcanceobra.entities.AlcanceObraEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AlcanceObraRepository extends JpaRepository<AlcanceObraEntity, Long> {
 }
