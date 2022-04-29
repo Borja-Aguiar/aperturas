@@ -12,4 +12,4 @@
      driver-class-name: com.mysql.cj.jdbc.Driver
      url: jdbc:mysql://localhost:3306/demodb?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
      username: root
-     password: Agmiox2022!
+     password: 1234567890
