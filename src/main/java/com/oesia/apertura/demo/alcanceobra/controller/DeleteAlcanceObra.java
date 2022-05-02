@@ -20,7 +20,7 @@ public class DeleteAlcanceObra {
     private DeleteAlcanceObraInterface deleteAlcanceObraInterface;
 
     @DeleteMapping("/delete/{idAlcanceObra}")
-    @ApiOperation(value = "DeleteEstadoProyectoController--Delete EstadoProyecto")
+    @ApiOperation(value = "DeleteAlcanceObraController--Delete AlcanceObra")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 201, message = "CREATED"),
