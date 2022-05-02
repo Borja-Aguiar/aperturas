@@ -10,7 +10,9 @@ import com.oesia.apertura.demo.obra.model.ObraDTO;
 import com.oesia.apertura.demo.obra.repository.ObraRepository;
 import com.oesia.apertura.demo.obra.service.interfaz.FindObraInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class FindObraImpl implements FindObraInterface {
 
     @Autowired
