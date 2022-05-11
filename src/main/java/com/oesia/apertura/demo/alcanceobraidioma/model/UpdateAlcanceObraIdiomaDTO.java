@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AddAlcanceObraIdiomaDTO {
+public class UpdateAlcanceObraIdiomaDTO {
 
+    private Long alcanceObraIdiomaId;
     private Long alcanceObraId;
     private String nombre;
     private Long idiomaId;

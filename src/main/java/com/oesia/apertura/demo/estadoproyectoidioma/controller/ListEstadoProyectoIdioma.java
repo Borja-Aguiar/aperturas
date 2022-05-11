@@ -1,4 +1,38 @@
 package com.oesia.apertura.demo.estadoproyectoidioma.controller;
 
+import com.oesia.apertura.demo.estadoproyectoidioma.model.EstadoProyectoIdiomaDTO;
+import com.oesia.apertura.demo.estadoproyectoidioma.service.interfaz.ListEstadoProyectoIdiomaInterface;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(path = "/estadoProyectoIdioma")
+@Api(tags = "EstadoProyectoIdioma")
 public class ListEstadoProyectoIdioma {
+
+    @Autowired
+    private ListEstadoProyectoIdiomaInterface listEstadoProyectoIdiomaInterface;
+
+    @GetMapping("/ListEstadoProyectoIdioma")
+    @ApiOperation(value = "ListEstadoProyectoIdiomaController--List EstadoProyectoIdioma")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "OK"),
+            @ApiResponse(code = 201, message = "CREATED"),
+            @ApiResponse(code = 401, message = "Unauthorized"),
+            @ApiResponse(code = 500, message = "Internal Server Error")})
+    public @ResponseBody
+    ResponseEntity<List<EstadoProyectoIdiomaDTO>> findEstadoProyectoIdioma() {
+        return new ResponseEntity<>(listEstadoProyectoIdiomaInterface.list(), HttpStatus.OK);
+    }
 }

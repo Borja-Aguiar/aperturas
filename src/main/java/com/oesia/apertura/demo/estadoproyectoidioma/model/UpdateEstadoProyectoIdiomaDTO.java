@@ -1,4 +1,4 @@
-package com.oesia.apertura.demo.alcanceobraidioma.model;
+package com.oesia.apertura.demo.estadoproyectoidioma.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,9 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AddAlcanceObraIdiomaDTO {
+public class UpdateEstadoProyectoIdiomaDTO {
 
-    private Long alcanceObraId;
+    private Long estadoProyectoIdiomaId;
+    private Long estadoProyectoId;
     private String nombre;
     private Long idiomaId;
 }
