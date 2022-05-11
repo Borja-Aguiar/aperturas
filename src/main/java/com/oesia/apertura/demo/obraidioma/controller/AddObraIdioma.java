@@ -1,8 +1,7 @@
-package com.oesia.apertura.demo.obra.controller;
+package com.oesia.apertura.demo.obraidioma.controller;
 
-import com.oesia.apertura.demo.alcanceobra.model.AddAlcanceObraDTO;
-import com.oesia.apertura.demo.obra.model.AddObraDTO;
-import com.oesia.apertura.demo.obra.service.interfaz.AddObraInterface;
+import com.oesia.apertura.demo.obraidioma.model.AddObraIdiomaDTO;
+import com.oesia.apertura.demo.obraidioma.service.interfaz.AddObraIdiomaInterface;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -13,25 +12,22 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/obra")
-@Api(tags = "Obra")
-public class AddObra {
-
+@RequestMapping(path = "/obraidioma")
+@Api(tags = "ObraIdioma")
+public class AddObraIdioma {
     @Autowired
-    private AddObraInterface addObraInterface;
-
+    private AddObraIdiomaInterface addObraIdiomaInterface;
 
     @PostMapping("/add")
-    @ApiOperation(value = "AddObra--Insert Obra")
+    @ApiOperation(value = "AddObraIdioma--Insert ObraIdioma")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "OK"),
             @ApiResponse(code = 201, message = "CREATED"),
             @ApiResponse(code = 401, message = "Unauthorized"),
             @ApiResponse(code = 500, message = "Internal Server Error")})
-    @ResponseBody
-    ResponseEntity<String> addObra(@RequestBody AddObraDTO addObraDTO) {
-        addObraInterface.add(addObraDTO);
-        return new ResponseEntity<>("Inserted in database correctly", HttpStatus.OK);
+    public @ResponseBody
+    ResponseEntity<String> addObraIdioma(@RequestBody AddObraIdiomaDTO addObraIdiomaDTO) {
+        addObraIdiomaInterface.add(addObraIdiomaDTO);
+        return new ResponseEntity<>("Inserted in database correctly", HttpStatus.CREATED);
     }
-
 }
